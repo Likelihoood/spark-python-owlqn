@@ -1,9 +1,8 @@
 # spark-python-owlqn
 L1 Logistic Regression optimized by OWLQN
 
-I have searched OWLQN in github, found that  there is no such implementation for L1 LR in SPARK.
-SPARK has its own implementation for L1 by SGD, but it seems like that it is not suitable for L1.
-
+I have searched OWLQN in github, found that  there is no such implementation for L1 LR optimized by OWLQN in SPARK.
+SPARK has its own implementation for L1 by SGD, but it seems like that it is not suitable for L1 especially for speacial case such as CTR, CVR model by using large scale sparse feature.
 So I try to implement OWLQN in python.
 
 Input:<br>
