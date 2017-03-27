@@ -1,7 +1,7 @@
 # spark-python-owlqn
 L1 Logistic Regression optimized by OWLQN
 
-I have search OWLQN in github, found that  there is no such implementation for LR.
+I have searched OWLQN in github, found that  there is no such implementation for L1 LR in SPARK.
 SPARK has its own implementation for L1 by SGD, but it seems like that it is not suitable for L1.
 
 So I try to implement OWLQN in python.
@@ -21,4 +21,3 @@ it support intercept by setting intercept as True while create OWLQN instance.
 intercept value will be the weights[feaNum]
 
 LBFGS and backtrackline search will be executed in driver of spark, so it request driver memory can hold all feature weight and LBFGS's vector.
-
