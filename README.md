@@ -6,22 +6,21 @@ SPARK has its own implementation for L1 by SGD, but it seems like that it is not
 
 So I try to implement OWLQN in python.
 
-Input:
-Sparse Vector define by following format:
-(label, {index: value})
-label can be 1, 0/-1
-it use dict to describe vector, index is the feature index, value is the feature value
+Input:<br>
+Sparse Vector define by following format:<br>
+(label, {index: value})<br>
+label can be 1, 0/-1<br>
+it use dict to describe vector, index is the feature index, value is the feature value<br>
 
+output:<br>
+weights<br>
+{index: weight}<br>
 
-output:
-weights
-{index: weight}
+it support intercept by setting intercept as True while create OWLQN instance.<br>
 
-it support intercept by setting intercept as True while create OWLQN instance.
-intercept value will be the weights[feaNum]
+intercept value will be the weights[feaNum]<br>
 
-LBFGS and backtrackline search will be executed in driver of spark, so it request driver memory can hold all feature weight and LBFGS's vector.
-
+LBFGS and backtrackline search will be executed in driver of spark, so it request driver memory can hold all feature weight and LBFGS's vector.<br>
 
 RUN Test:<br>
 
